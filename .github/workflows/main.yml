@@ -21,7 +21,7 @@ jobs:
         set -e -o pipefail
         ./cruelbuild config                    \
                      model=${{ matrix.model }} \
-                     name="Taver_2"         \
+                     name="Taver_3"         \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \
@@ -32,6 +32,13 @@ jobs:
                      +ntfs                     \
                      -morosound                \
                      +boeffla_wl_blocker       \
+                     +50hz \
+                     +tcp_bbr \
+                     +nohardening2 \
+                     +nodebug \
+                     +noksm \
+                     +noswap \
+                     +nozram \
                      +fake_config \
 
 
